@@ -1,0 +1,136 @@
+:root {
+  --couleur-blanc: #ffffff;
+  --couleur-orange: #ff7900;
+  --couleur-texte: #030303;
+  --couleur-texte-2: #3d3939;
+  --couleur-texte-3: #cccccc;
+  --couleur-vert-ment: #00938e;
+  --couleur-bordure: #dadada;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background-color: var(--couleur-blanc);
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+h2, h4 {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--couleur-texte-3);
+  border-radius: 0.5rem;
+}
+
+.date {
+  display: flex;
+  gap: 1rem;
+}
+
+.date .form-group {
+  flex: 1;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.photo-glisser {
+  border: 4px dashed var(--couleur-texte-3);
+  width: 80%;
+  height: 100px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--couleur-texte-3);
+  padding-top: 2.5rem;
+}
+
+.photo-glisser span {
+  color: var(--couleur-orange);
+  font-weight: bold;
+}
+
+.format {
+  font-size: 0.9rem;
+  color: var(--couleur-texte-3);
+}
+
+#search {
+  position: relative;
+}
+
+#search input {
+  padding-left: 2.5rem;
+}
+
+#search i {
+  position: absolute;
+  top: 2rem;
+  left: 0.8rem;
+  color: var(--couleur-texte-3);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: var(--couleur-texte-2);
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn.cancel {
+  background-color: var(--couleur-blanc);
+  border: 1px solid var(--couleur-texte-2);
+}
+
+.btn.submit {
+  background-color: var(  --couleur-vert-ment);
+}
+
+
+

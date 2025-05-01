@@ -1,0 +1,191 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "nom": "Diop",
+            "prenom": "Awa",
+            "email": "awa@example.com",
+            "login": "adminODC",
+            "role": "admin",
+            "telephone": "775233467",
+            "password": "1234"
+        },
+        {
+            "id": 2,
+            "nom": "Segnane",
+            "prenom": "thierno",
+            "email": "segnane.thier@example.com",
+            "login": "vigileODC",
+            "role": "vigile",
+            "telephone": "778890023",
+            "password": "12345"
+        },
+        {
+            "id": 3,
+            "nom": "Ndiaye",
+            "prenom": "oumy",
+            "email": "oumyndiaye@example.com",
+            "login": "apprenantODC",
+            "role": "apprenant",
+            "telephone": "781232233",
+            "password": "1234"
+        },
+        {
+            "id": 4,
+            "nom": "Niang",
+            "prenom": "Aly",
+            "email": "alyniang@example.com",
+            "login": "apprenantODC",
+            "role": "apprenant",
+            "telephone": "761389912",
+            "password": "1234"
+        }
+    ],
+    "promotion": [
+        {
+            "id": "promo_680ac1ce88860",
+            "nom": "Promotion 2025",
+            "debut": "2025-02-02",
+            "fin": "2026-02-01",
+            "statut": "Inactive",
+            "referentiel": [
+                "DEV WEB\/MOBILE",
+                "REF DIG",
+                "DEV DATA",
+                "AWS",
+                "HACKEUSE"
+            ],
+            "photo": "\/assets\/images\/promo\/promo1.png",
+            "apprenants": 130
+        },
+        {
+            "id": "promo_680b5f841dd95",
+            "nom": "Promotion 2024",
+            "debut": "2024-02-01",
+            "fin": "2025-02-01",
+            "statut": "Active",
+            "referentiel": [
+                "DEV WEB\/MOBILE",
+                "REF DIG",
+                "DEV DATA",
+                "AWS",
+                "HACKEUSE"
+            ],
+            "photo": "\/assets\/images\/promo\/promo2.png",
+            "apprenants": 180
+        },
+        {
+            "id": "promo_680d65fae8333",
+            "nom": "Promotion 2023",
+            "debut": "2023-02-01",
+            "fin": "2024-02-01",
+            "statut": "Inactive",
+            "referentiel": [
+                "DEV WEB\/MOBILE",
+                "REF DIG",
+                "DEV DATA",
+                "AWS",
+                "HACKEUSE"
+            ],
+            "photo": "\/assets\/images\/promo\/promo3.png",
+            "apprenants": 180
+        },
+        {
+            "id": "promo_6810241fd2f67",
+            "nom": "promotion 2010",
+            "debut": "12\/01\/2010",
+            "fin": "12\/01\/2011",
+            "referentiel": [
+                "DEV DATA",
+                "AWS",
+                "HACKEUSE"
+            ],
+            "photo": "promo_6810241fd2eee5.84023566_404 Error Page not Found with people connecting a plug-cuate.png",
+            "statut": "Inactive",
+            "apprenants": 0
+        },
+        {
+            "id": "promo_681157a5352f4",
+            "nom": "promotion 2030",
+            "debut": "12\/01\/2030",
+            "fin": "12\/01\/2031",
+            "referentiel": [
+                "HACKEUSE"
+            ],
+            "photo": "promo_681157a5352746.44867184_a.png",
+            "statut": "Inactive",
+            "apprenants": 0
+        }
+    ],
+    "referentiels": [
+        {
+            "image": "\/assets\/images\/referentiel\/dev_web.png",
+            "nom": "Developpement Web\/Mobile",
+            "description": "De l'analyse du besoin \u00e0 la mise en ligne, en passant par...",
+            "modules": 1,
+            "apprenants": 0,
+            "capacite": 55
+        },
+        {
+            "image": "\/assets\/images\/referentiel\/refdig.png",
+            "nom": "Referent digital",
+            "description": "Couteau-suisse du num\u00e9rique, le r\u00e9f\u00e9rent digital participe..",
+            "modules": 0,
+            "apprenants": 12,
+            "capacite": 105
+        },
+        {
+            "image": "\/assets\/images\/referentiel\/data.png",
+            "nom": "Developpement Data",
+            "description": "De l'analyse du besoin \u00e0 la data visualisation, en passant par la..",
+            "modules": 0,
+            "apprenants": 12,
+            "capacite": 25
+        },
+        {
+            "image": "\/assets\/images\/referentiel\/hack.png",
+            "nom": "Assistanat Digital (Hackeuse)",
+            "description": "Passer par la publicite et le mise en page des...",
+            "modules": 4,
+            "apprenants": 12,
+            "capacite": 20
+        },
+        {
+            "image": "\/assets\/images\/referentiel\/aws.png",
+            "nom": "AWS & DevOps",
+            "description": "Passer par la publicite et le mise en page des...",
+            "modules": 4,
+            "apprenants": 12,
+            "capacite": 23
+        },
+        {
+            "nom": "Robotique",
+            "description": "l'art de maitriser les....",
+            "capacite": 20,
+            "modules": 1,
+            "apprenants": 0,
+            "statut": "inactif",
+            "image": "\/assets\/images\/referentiel\/robot.png"
+        }
+    ],
+    "apprenants": [
+        {
+            "photo": "\/assets\/images\/referentiel\/dev_web.png",
+            "matricule": 1051233,
+            "Nom complet": "KHADIDIATOU FALL",
+            "adresse": "Liberte 6 extension",
+            "telephone": 771234433,
+            "referentiel": "AWS",
+            "statut": "Active"
+        },
+        {
+            "photo": "\/assets\/images\/referentiel\/dev_web.png",
+            "matricule": 1051232,
+            "Nom complet": "ISMAILA FALL",
+            "adresse": "Liberte 1",
+            "telephone": 771234433,
+            "referentiel": "Referent digital",
+            "statut": "Remplace"
+        }
+    ]
+}
