@@ -43,7 +43,7 @@
                         <li><a href="index.php?page=<?= \App\Enums\Page::APPRENANT_LIST->value ?>"><i class="fas fa-users"></i> Apprenants</a></li>
                         <li><a href="#"><i class="fas fa-calendar-check"></i> Gestion des présences</a></li>
                         <li><a href="#"><i class="fas fa-laptop"></i> Kits & Laptops</a></li>
-                        <li><a href="#"><i class="fas fa-chart-bar"></i> Rapports & Stats</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> Rapport & Stats</a></li>
                     </ul>
                 </nav>
             </div>
