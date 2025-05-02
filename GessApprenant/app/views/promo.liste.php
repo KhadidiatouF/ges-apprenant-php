@@ -62,11 +62,11 @@ ob_start();
     <?php
     // ----------------- Pagination dynamique -----------------
     $currentPage = isset($_GET['current']) ? (int)$_GET['current'] : 1;
-    $perPage = 5; // 5 promotions par page
+    $perPage = 3; 
     $totalPromotions = count($promotions);
     $totalPages = (int) ceil($totalPromotions / $perPage);
 
-    // Calcul des éléments pour cette page
+    // 
     $start = ($currentPage - 1) * $perPage;
     $promotionsPage = array_slice($promotions, $start, $perPage);
     ?>
@@ -120,7 +120,7 @@ ob_start();
 
     <div class="pagination">
         <label>Page</label>
-        <select onchange="location.href='?page=promo.list&current=' + this.value">
+        <select onchange="location.href='?page=promo-list&current=' + this.value">
             <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                 <option value="<?= $i ?>" <?= ($i == $currentPage) ? 'selected' : '' ?>><?= $i ?></option>
             <?php endfor; ?>
@@ -129,17 +129,17 @@ ob_start();
 
         <div class="pagination-controls">
             <?php if ($currentPage > 1): ?>
-                <a href="?page=promo.list&current=<?= $currentPage - 1 ?>"><button>&lt;</button></a>
+                <a href="?page=promo-list&current=<?= $currentPage - 1 ?>"><button>&lt;</button></a>
             <?php endif; ?>
 
             <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                <a href="?page=promo.list&current=<?= $i ?>">
+                <a href="?page=promo-list&current=<?= $i ?>">
                     <button class="<?= ($i == $currentPage) ? 'active' : '' ?>"><?= $i ?></button>
                 </a>
             <?php endfor; ?>
 
             <?php if ($currentPage < $totalPages): ?>
-                <a href="?page=promo.list&current=<?= $currentPage + 1 ?>"><button>&gt;</button></a>
+                <a href="?page=promo-list&current=<?= $currentPage + 1 ?>"><button>&gt;</button></a>
             <?php endif; ?>
         </div>
     </div>

@@ -16,6 +16,31 @@ if (!file_exists($dataPath)) {
     die("Fichier data.json introuvable à l'emplacement : $dataPath");
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['referentiel']) && $_POST['referentiel'] !== '') {
+        $refToAdd = $_POST['referentiel'];
+
+        if (file_exists($dataPath)) {
+            $data = json_decode(file_get_contents($dataPath), true);
+
+            if (isset($data['promotion']) && is_array($data['promotion'])) {
+                foreach ($data['promotion'] as &$promo) {
+                    if ($promo['statut'] === 'Active') {
+                        if (!in_array($refToAdd, $promo['referentiel'])) {
+                            $promo['referentiel'][] = $refToAdd;
+                            file_put_contents($dataPath, json_encode($data, JSON_PRETTY_PRINT));
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
 function getAllReferentiels(string $search = ''): array {
     $file = __DIR__ . '/../data/data.json';
     if (!file_exists($file)) return [];
@@ -44,6 +69,8 @@ function getAllReferentiels(string $search = ''): array {
 
     return array_values($referentiels);
 }
+
+
 
 
 
@@ -239,17 +266,17 @@ function saveData(array $data): void {
 }
 
 function affecterReferentiel(string $codeRef): string {
-    $libelles = [
-        'dev-web' => 'Référentiel Dev web/mobile',
-        'data' => 'Référentiel Dev data',
-        'aws' => 'Référentiel AWS & Devops',
-        'ref-dig' => 'Référentiel Référent Digital',
-        'hackeuse' => 'Référentiel Hackeuse',
+    $nom = [
+        'DEV WEB/MOBILE' => 'Référentiel Dev web/mobile',
+        'DATA' => 'Référentiel Dev data',
+        'AWS' => 'Référentiel AWS & Devops',
+        'REF DIG' => 'Référentiel Référent Digital',
+        'HACKEUSE' => 'Référentiel Hackeuse',
     ];
 
-    if (!isset($libelles[$codeRef])) return "Référentiel invalide.";
+    if (!isset($nom[$codeRef])) return "Référentiel invalide.";
 
-    $libelle = $libelles[$codeRef];
+    $libelle = $nom[$codeRef];
     $jsonPath = __DIR__ . '/../data/data.json';
     $data = json_decode(file_get_contents($jsonPath), true);
 
@@ -286,6 +313,8 @@ function desaffecterReferentiel(string $refToRemove): string {
             $promo['referentiel'] = array_values($promo['referentiel']); // réindexation
             file_put_contents($jsonPath, json_encode($data, JSON_PRETTY_PRINT));
             return "Référentiel supprimé.";
+            referentiel_controller();
+            
         }
     }
 

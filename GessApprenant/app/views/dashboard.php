@@ -12,6 +12,7 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/dashboard.css">
     <title>Document</title>
     
 </head>
@@ -199,50 +200,58 @@ ob_start();
  </div>
 
 
-     <div class="troisieme">
-         <div class="c3">
-             <div class="cercle">
-               <i class="fa-regular fa-user"></i>
-             </div>
+    <div class="troisieme">
+                <div class="c3">
+                    <div class="cercle">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
              <h1>180</h1>
              <p>Apprenants</p>
-             <div class="ca1">
-             <i class="fa-solid fa-person-dress">35%</i>
-             </div>
+
+                <div class="ca1">
+                    <i class="fa-solid fa-person-dress">35%</i>
+                </div>
              <img src="/assets/images/diag.png" alt="">
+
              <div class="ca2">
               <i class="fa-solid fa-person">65%</i>
              </div>
+        </div>
 
-             
-         </div>
-         <div class="c4">
-            <img src="/assets/images/d.png"  alt="">
-            <div class="stats-container">
-                 <div class="stat-item">
-                     <div class="circle full"><span>100%</span></div>
-                     <div class="label">Taux d'insertion</div>
-                 </div>
-                 <div class="stat-item">
-                     <div class="circle partial"><span>56%</span></div>
-                     <div class="label">Taux de</div>
-                 </div>
-                 <div class="stat-item">
-                     <div class="icon people"></div>
-                     <div class="sub-label">Communauté de plus de</div>
-                     <div class="number">1000</div>
-                 </div>
-                 <div class="stat-item">
-                     <div class="icon cloud"></div>
-                     <div class="orange-label">4 Centres</div>
-                 </div>
-             </div>
+            <div class="c4">
+                <img src="/assets/images/d.png"  alt="">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="circle full"><span>100%</span></div>
+                        <div class="label">Taux d'insertion</div>
+                        <div class="label1"> Professionnelle</div>
+
+                    </div>
+                    <div class="stat-item">
+                        <div class="circle partial"><span>56%</span></div>
+                        <div class="label">Taux de</div>
+                        <div class="label2"> Féminisation</div>
+
+                    </div>
+                    <div class="stat-item">
+                        <div class="icon people"></div>
+                        <div class="sub-label">Communauté de plus de</div>
+                        <div class="number">1000 <br> Développeurs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="icon cloud"></div>
+                        <div class="orange-label">4 Centres</div>
+                        <div class="region">Dakar, Diamniadio <br> Ziguinchor, et Saint-Louis</div>
+
+                    </div>
+                </div>
 
 
-         </div>
+            </div>
        
 
-     </div>
+    </div>
   
 
 

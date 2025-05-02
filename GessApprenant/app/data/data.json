@@ -65,11 +65,10 @@
             "fin": "2025-02-01",
             "statut": "Active",
             "referentiel": [
-                "DEV WEB\/MOBILE",
                 "REF DIG",
-                "DEV DATA",
-                "AWS",
-                "HACKEUSE"
+                "DEV WEB\/MOBILE",
+                "HACKEUSE",
+                "DATA"
             ],
             "photo": "\/assets\/images\/promo\/promo2.png",
             "apprenants": 180
@@ -100,7 +99,7 @@
                 "AWS",
                 "HACKEUSE"
             ],
-            "photo": "promo_6810241fd2eee5.84023566_404 Error Page not Found with people connecting a plug-cuate.png",
+            "photo": "\/assets\/images\/promo\/promo4.png",
             "statut": "Inactive",
             "apprenants": 0
         },
@@ -112,7 +111,7 @@
             "referentiel": [
                 "HACKEUSE"
             ],
-            "photo": "promo_681157a5352746.44867184_a.png",
+            "photo": "\/assets\/images\/promo\/promo2.png",
             "statut": "Inactive",
             "apprenants": 0
         }

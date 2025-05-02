@@ -1,6 +1,33 @@
 
 
+<?php
+require_once __DIR__ . '/../controllers/ref.controller.php';
 
+
+$message = "";
+$referentielsPromoActive = [];
+$nomPromoActive = "";
+
+$jsonPath = __DIR__ . '/../data/data.json';
+
+if (file_exists($jsonPath)) {
+    $data = json_decode(file_get_contents($jsonPath), true);
+
+    if (isset($data['promotion']) && is_array($data['promotion'])) {
+        foreach ($data['promotion'] as $promo) {
+            if ($promo['statut'] === 'Active') {
+                $referentielsPromoActive = $promo['referentiel'];
+                $nomPromoActive = $promo['nom'];
+                break;
+            }
+        }
+    } else {
+        $message = "Format JSON invalide.";
+    }
+} else {
+    $message = "Fichier JSON non trouvé à : $jsonPath";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,20 +53,21 @@
                 <label for="modal-toggle" class="close-button">×</label>
             </div>
             <div class="modal-body">
-               <form method="post">
+               <form method="post" action="index.php?page=<?= \App\Enums\Page::REFERENTIEL->value ?>">
+                 <input type="hidden" name="ajouterReferentiel" value="1"> 
                     <div class="form-group1">
                         <label for="referential-title">Libellé référentiel</label>
                         <select id="referentiel" name="referentiel" class="input-field">
                             <option value="">Référentiels</option>
-                            <option value="dev-web">Référentiel Dev web/mobile</option>
-                            <option value="data">Référentiel Dev data</option>
-                            <option value="aws">Référentiel AWS & Devops</option>
-                            <option value="ref-dig">Référentiel Référent Digital</option>
-                            <option value="hackeuse">Référentiel Hackeuse</option>
+                            <option value="DEV WEB/MOBILE">Référentiel Dev web/mobile</option>
+                            <option value="DATA">Référentiel Dev data</option>
+                            <option value="AWS">Référentiel AWS & Devops</option>
+                            <option value="REF DIG">Référentiel Référent Digital</option>
+                            <option value="HACKEUSE">Référentiel Hackeuse</option>
                         </select>
                         
                         <div class="ajout">
-                            <button type="submit" name="ajouterReferentiel" class="ajj">Ajouter</button>
+                            <button type="submit" class="ajj">Ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -49,12 +77,12 @@
                     <div class="tag-container">
                         <?php foreach ($referentielsPromoActive as $ref): ?>
                             <?php
-                                $class = strtolower(str_replace(' ', '-', $ref)); // pour la classe CSS
+                                $class = strtolower(str_replace(' ', '-', $ref)); 
                             ?>
                             <span class="tag <?= $class ?>">
                                 <?= $ref ?> 
-                                <form method="post" style="display:inline;">
-                                    <input type="hidden" name="supprimerReferentiel" value="<?= $ref ?>">
+                                <form method="post" action="index.php?page=<?= \App\Enums\Page::REF_DESAFFECT->value ?>" style="display:inline;">
+                                    <input type="hidden" name="refToRemove" value="<?= htmlspecialchars($ref) ?>">
                                     <button type="submit" class="close" >×</button>
                                 </form>
                             </span>

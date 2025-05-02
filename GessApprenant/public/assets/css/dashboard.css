@@ -433,7 +433,16 @@ body {
 .label, .sub-label, .orange-label {
   margin-top: 10px;
   font-size: 14px;
+  background-color: orange;
 }
+
+.c4 .label {
+  background-color: #00e0fd;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
 
 .number {
   font-size: 20px;
@@ -449,6 +458,8 @@ body {
   display: inline-block;
   margin-top: 8px;
 }
+
+
 
 .icon {
   width: 60px;

@@ -32,8 +32,16 @@ match ($page) {
     Page::REFERENTIEL->value => referentiel_controller(),
     Page::REFERENTIEL_LIST->value => referentiel_list_controller(),
     Page::REF_CREATE->value => create_referentiel(),
-    Page::REF_AFFECT->value =>  affecterReferentiel($promoNom, $referentiel),
-    Page::REF_DESAFFECT->value =>  desaffecterReferentiel($promoNom,$referentiel),
+    
+    Page::REF_AFFECT->value => (function() {
+        $codeRef = $_POST['referentiel'] ?? null;
+        echo $codeRef ? affecterReferentiel($codeRef) : "Référentiel non fourni.";
+    })(),
+
+    Page::REF_DESAFFECT->value => (function() {
+        $refToRemove = $_POST['refToRemove'] ?? null;
+        echo $refToRemove ? desaffecterReferentiel($refToRemove) : "Référentiel à désaffecter non fourni.";
+    })(),
 
 
     Page::APPRENANT_LIST->value => show_apprenant(),
