@@ -12,6 +12,8 @@ $dataPath = __DIR__ . '/../data/data.json';
 $search = $_GET['search'] ?? '';
 $referentiels = getAllReferentiels($search); 
 
+
+
 if (!file_exists($dataPath)) {
     die("Fichier data.json introuvable à l'emplacement : $dataPath");
 }
@@ -115,6 +117,11 @@ function referentiel_controller(): void {
     $content = ob_get_clean();
 
     require __DIR__ . "/../views/layout/base.layout.php";
+       // 🟡 1. Gestion du POST pour désaffecter
+       if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['refToRemove'])) {
+        $ref = $_POST['refToRemove'];
+        $message = desaffecterReferentiel($ref); // ⬅ fonction existante
+    }
 }
 
 
@@ -135,7 +142,7 @@ function getReferentielsPromoActive(): array {
     $promotions = $data['promotion'] ?? [];
     $referentiels = $data['referentiels'] ?? [];
 
-    $promoActive = array_filter($promotions, fn($promo) => isset($promo['statut']) && strtolower($promo['statut']) === "active");
+    $promoActive = array_filter($promotions, fn($promo) => isset($promo['statut']) && strtolower($promo['statut']) === "Active");
     $promoActive = array_shift($promoActive);
 
     if (!$promoActive) {
@@ -313,13 +320,14 @@ function desaffecterReferentiel(string $refToRemove): string {
             $promo['referentiel'] = array_values($promo['referentiel']); // réindexation
             file_put_contents($jsonPath, json_encode($data, JSON_PRETTY_PRINT));
             return "Référentiel supprimé.";
-            referentiel_controller();
             
         }
     }
 
     return "Référentiel non trouvé.";
 }
+
+
 
 
 function chargerReferentielsPromoActive(): array {

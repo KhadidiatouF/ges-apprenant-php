@@ -46,6 +46,8 @@ match ($page) {
 
     Page::APPRENANT_LIST->value => show_apprenant(),
     Page::APPRENANT->value => create_app(),
+    Page::APPRENANT_DETAIL_MODULE->value => show_apprenant_module(),
+    Page::APPRENANT_DETAIL_ABSENCE->value => show_apprenant_absence(),
 
     
 

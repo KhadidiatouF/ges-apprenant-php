@@ -437,7 +437,7 @@ body {
 }
 
 .c4 .label {
-  background-color: #00e0fd;
+  background-color: #fd9800;
   padding: 4px 8px;
   border-radius: 4px;
   display: inline-block;
@@ -450,7 +450,7 @@ body {
   color: #008080;
 }
 
-.orange-label, .sub-label {
+.orange-label, .sub-label , .label{
   background-color: orange;
   color: white;
   padding: 2px 6px;

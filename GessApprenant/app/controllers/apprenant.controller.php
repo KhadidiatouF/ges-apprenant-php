@@ -17,6 +17,28 @@ function show_apprenant(): void {
     require_once __DIR__ . "/../views/layout/base.layout.php";
 }
 
+function show_apprenant_module(): void {
+    $title = "Apprenant module";
+    $css = "/assets/css/app_module.css";
+
+    ob_start();
+    require_once __DIR__ . "/../views/apprenant_module.php"; 
+    $content = ob_get_clean();
+
+    require_once __DIR__ . "/../views/layout/base.layout.php";
+}
+
+function show_apprenant_absence(): void {
+    $title = "Apprenant absence";
+    $css = "/assets/css/app_absence.css";
+
+    ob_start();
+    require_once __DIR__ . "/../views/apprenant_absence.php"; 
+    $content = ob_get_clean();
+
+    require_once __DIR__ . "/../views/layout/base.layout.php";
+}
+
 
 function create_app(): void {
     $title = "Ajout app";

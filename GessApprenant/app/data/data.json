@@ -47,7 +47,7 @@
             "nom": "Promotion 2025",
             "debut": "2025-02-02",
             "fin": "2026-02-01",
-            "statut": "Inactive",
+            "statut": "Active",
             "referentiel": [
                 "DEV WEB\/MOBILE",
                 "REF DIG",
@@ -63,7 +63,7 @@
             "nom": "Promotion 2024",
             "debut": "2024-02-01",
             "fin": "2025-02-01",
-            "statut": "Active",
+            "statut": "Inactive",
             "referentiel": [
                 "REF DIG",
                 "DEV WEB\/MOBILE",
@@ -80,7 +80,6 @@
             "fin": "2024-02-01",
             "statut": "Inactive",
             "referentiel": [
-                "DEV WEB\/MOBILE",
                 "REF DIG",
                 "DEV DATA",
                 "AWS",

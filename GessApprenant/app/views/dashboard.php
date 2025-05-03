@@ -149,14 +149,14 @@ ob_start();
              <div class="absence" style="height: 10%;"></div>
              <div class="retard" style="height: 20%;"></div>
              <div class="presence" style="height: 70%;"></div>
-             <span class="label">Jun</span>
+              <span class="label">Jun</span>
              </div>
 
              <div class="bar">
              <div class="absence" style="height: 10%;"></div>
              <div class="retard" style="height: 20%;"></div>
              <div class="presence" style="height: 70%;"></div>
-             <span class="label">Jul</span>
+               <span class="label">Jul</span>
              </div>
 
              <div class="bar">

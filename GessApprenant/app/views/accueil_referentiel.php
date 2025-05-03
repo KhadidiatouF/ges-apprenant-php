@@ -27,7 +27,13 @@ if (file_exists($jsonPath)) {
 } else {
     $message = "Fichier JSON non trouvé à : $jsonPath";
 }
+
+$tousReferentiels = ["DEV WEB/MOBILE", "DATA", "AWS", "REF DIG", "HACKEUSE"];
+$referentielsDisponibles = array_filter($tousReferentiels, fn($r) => !in_array($r, $referentielsPromoActive));
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,12 +65,11 @@ if (file_exists($jsonPath)) {
                         <label for="referential-title">Libellé référentiel</label>
                         <select id="referentiel" name="referentiel" class="input-field">
                             <option value="">Référentiels</option>
-                            <option value="DEV WEB/MOBILE">Référentiel Dev web/mobile</option>
-                            <option value="DATA">Référentiel Dev data</option>
-                            <option value="AWS">Référentiel AWS & Devops</option>
-                            <option value="REF DIG">Référentiel Référent Digital</option>
-                            <option value="HACKEUSE">Référentiel Hackeuse</option>
+                            <?php foreach ($referentielsDisponibles as $ref): ?>
+                                <option value="<?= htmlspecialchars($ref) ?>">Référentiel <?= htmlspecialchars($ref) ?></option>
+                            <?php endforeach; ?>
                         </select>
+
                         
                         <div class="ajout">
                             <button type="submit" class="ajj">Ajouter</button>
@@ -72,16 +77,18 @@ if (file_exists($jsonPath)) {
                     </div>
                 </form>
 
+               
                 <div class="form-group">
                     <label>Promotion active</label>
                     <div class="tag-container">
+                        
                         <?php foreach ($referentielsPromoActive as $ref): ?>
                             <?php
                                 $class = strtolower(str_replace(' ', '-', $ref)); 
                             ?>
                             <span class="tag <?= $class ?>">
                                 <?= $ref ?> 
-                                <form method="post" action="index.php?page=<?= \App\Enums\Page::REF_DESAFFECT->value ?>" style="display:inline;">
+                                <form method="post" action="index.php?page=<?= \App\Enums\Page::REFERENTIEL->value ?>" style="display:inline;">
                                     <input type="hidden" name="refToRemove" value="<?= htmlspecialchars($ref) ?>">
                                     <button type="submit" class="close" >×</button>
                                 </form>
