@@ -78,13 +78,17 @@ h1{
   }
   .filters a{
     text-decoration: none;
+    
   }
 
   .telecharger {
-    margin-top: 10px;
+    margin-top: 50px;
     margin-right: 5px;
 
   }
+
+
+
 
   .fa-file{
     margin-left: 20px; /* Pour espacer l'icône du texte */

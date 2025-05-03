@@ -19,6 +19,14 @@ function show_apprenant(): void {
 
 
 function create_app(): void {
+    $title = "Ajout app";
+    $css = "/assets/css/ajout_app.css";
+
+    ob_start();
+    require_once __DIR__ . "/../views/ajout_apprenant.php"; 
+    $content = ob_get_clean();
+
+    require_once __DIR__ . "/../views/layout/base.layout.php";
    
 }
 

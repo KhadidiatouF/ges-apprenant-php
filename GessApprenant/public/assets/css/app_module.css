@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #f8f9fa;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .back-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .badge {
+    background: #04d39a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  .status {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .infos li {
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  .main-content {
+    width: 75%;
+    padding: 30px;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .green { background: #d4f5e9; color: #08a76d; }
+  .orange { background: #fff3cd; color: #856404; }
+  .red { background: #f8d7da; color: #721c24; }
+  
+  .section-title {
+    background: orange;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+  
+  .modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .module-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .module-card .duration {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .module-card h4 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+  }
+  
+  .level {
+    display: inline-block;
+    background: #e5f5f1;
+    color: #08a76d;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .module-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  

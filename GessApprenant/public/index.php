@@ -10,3 +10,6 @@ define('BASE_URL','../');
 
 require_once BASE_URL.'app/route/route.web.php';
 
+// require_once BASE_URL.'app/views/apprenant_absence.php';
+
+

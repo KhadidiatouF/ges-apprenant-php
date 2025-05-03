@@ -14,7 +14,7 @@
 
 
 <div class="container">
-    <h1>Aprrenant</h1>
+    <h1>Apprenant</h1>
 
     <div class="filters">
         <form method="GET" action="">
@@ -29,16 +29,22 @@
         </select>
 
         <a href="#" class="telecharger">  
+
             Télécharger la liste
             <i class="fa-regular fa-file"></i>
+
         </a>
-        <a href="#" class="ajouter">
+        <a href="index.php?page=<?= \App\Enums\Page::APPRENANT->value ?>" class="ajouter">
             <i class="fa-solid fa-plus"></i>
             Ajouter apprenant
         </a>
     </div>
 
     <section class="summary-cards">
+       
+    </section>
+
+    <section class="bascule">
        
     </section>
 
@@ -55,41 +61,36 @@
                     <th>Téléphone</th>
                     <th>Référentiel</th>
                     <th>Statut</th>
+                    <th>Action</th>
+
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($apprenantsPage as $app): ?>
                     <tr>
-                        <td><img src="<?= $app['photo'] ?? '/assets/images/promo/promo1.png' ?>" width="80" alt="photo promo"></td>
-                        <td><?= htmlspecialchars($app['matricule'] ?? '---') ?></td>
-                        <td><?= htmlspecialchars($app['Nom complet'] ?? '---') ?></td>
-                        <td><?= htmlspecialchars($app['adresse'] ?? '---') ?></td>
-                        <td><?= htmlspecialchars($app['telephone'] ?? '---') ?></td>
-                        <td><?= htmlspecialchars($app['referentiel'] ?? '---') ?></td>
-                        <td><?= htmlspecialchars($app['statut'] ?? '---') ?></td>
+                        <td><img src="/assets/images/promo/promo1.png" width="80" alt="photo promo"></td>
+                        <td>1230032</td>
+                        <td>KHADIJA FALL</td>
+                        <td>LIBERTÉ 6 EXTENSION</td>
+                        <td>784317788</td>
+                        <td>DEV WEB/MOBILE</td>
+                        <td>Active </td>
+                        <td>... </td>
 
-
-                        <td>
-                            <?php
-                            $referentiels = is_string($app['referentiel']) ? explode(' ', $app['referentiel']) : (array) $app['referentiel'];
-                            foreach ($referentiels as $ref) {
-                                $classeCSS = strtolower(str_replace(['/', ' '], '-', $ref));
-                                echo '<span class="tag ' . htmlspecialchars($classeCSS) . '">' . htmlspecialchars(strtoupper($ref)) . '</span> ';
-                            }
-                            ?>
-                        </td>
-                        <td>
-                            <?php if (($app['statut'] ?? '') === 'Active'): ?>
-                                <span class="status active"><i class="fa-solid fa-circle"></i> Active</span>
-                            <?php elseif (($app['statut'] ?? '') === 'Inactive'): ?>
-                                <span class="status inactive"><i class="fa-solid fa-circle"></i> Inactive</span>
-                            <?php else: ?>
-                                <span><?= htmlspecialchars($app['statut'] ?? '---') ?></span>
-                            <?php endif; ?>
-                        </td>
                        
                     </tr>
-                <?php endforeach; ?>
+                    <tr>
+                        <td><img src="/assets/images/promo/promo1.png" width="80" alt="photo promo"></td>
+                        <td>1230032</td>
+                        <td>SEYNABOU FALL</td>
+                        <td>LIBERTÉ 6 EXTENSION</td>
+                        <td>784317788</td>
+                        <td>AWS</td>
+                        <td>Active </td>
+                        <td>... </td>
+
+
+                       
+                    </tr>
             </tbody>
         </table>
     </section>
