@@ -1,7 +1,7 @@
 
 <?php
 $title = "Promo grille";
-$css = "/assets/css/promo.grille.css";
+$css = "assets/css/promo.grille.css";
 
 ob_start();
 ?>

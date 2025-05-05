@@ -196,11 +196,3 @@ function generer_matricule(): string {
 
     return strval($dernier_matricule + 1);
 }
-
-
-
-
-
-
-
-

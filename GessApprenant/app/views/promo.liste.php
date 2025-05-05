@@ -1,6 +1,6 @@
 <?php
 $title = "Promotion";
-$css = "/assets/css/promo.liste.css";
+$css = "assets/css/promo.liste.css";
 
 ob_start();
 ?>
