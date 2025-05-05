@@ -53,6 +53,8 @@ enum Page: string {
 
     case APPRENANT_LIST = 'apprenant_list';
     case APPRENANT = 'apprenant-add';
+    case APPRENANT_DETAIL_MODULE = 'apprenant_detail_module';
+    case APPRENANT_DETAIL_ABSENCE = 'apprenant_detail_absence';
 
 
 }

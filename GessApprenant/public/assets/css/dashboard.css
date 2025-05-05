@@ -256,10 +256,10 @@ body {
     background-color: #f7941d;
   }
   
-  .label {
+  /* .label {
     margin-top: 6px;
-    font-size: 12px;
-  }
+    font-size: 15px;
+  } */
   
   .legend {
     margin-top: 15px;
@@ -433,6 +433,22 @@ body {
 .label, .sub-label, .orange-label {
   margin-top: 10px;
   font-size: 14px;
+  background-color: orange;
+}
+
+.c4 .label {
+  background-color: #fd9800;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+.c4 .label1, .label2, .region {
+ color: #008080; 
+ font-size: 16px;
+ font-weight: bold;
 }
 
 .number {
@@ -441,7 +457,7 @@ body {
   color: #008080;
 }
 
-.orange-label, .sub-label {
+.orange-label, .sub-label{
   background-color: orange;
   color: white;
   padding: 2px 6px;
@@ -449,6 +465,8 @@ body {
   display: inline-block;
   margin-top: 8px;
 }
+
+
 
 .icon {
   width: 60px;

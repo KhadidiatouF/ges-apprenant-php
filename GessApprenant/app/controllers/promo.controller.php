@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
-// Contrôleur (par exemple, promoController.php)
-// $statistics = getPromotionStatistics();
-// require_once __DIR__ . '/../views/promo.php';
+
 
 
 require_once __DIR__ . '/../models/promo.models.php';
@@ -51,14 +49,7 @@ function promo_list_controller(): void {
 }
 
 
-// function promo_controller(): void {
-//     $promotions = getAllPromotions();
-//     $statistics = getPromotionStatistics(); // <-- ajoute ça
-//     render('promo', [
-//         'promotions' => $promotions,
-//         'statistics' => $statistics // <-- et passe les données à la vue
-//     ]);
-// }
+
 
 function getPaginatedPromotions(array $promotions, int $page, int $limit): array {
     $offset = ($page - 1) * $limit;
@@ -66,15 +57,16 @@ function getPaginatedPromotions(array $promotions, int $page, int $limit): array
 }
 
 
+
 function promo_controller(): void {
     $search = $_GET['search'] ?? '';
-    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+    $current = isset($_GET['current']) ? (int)$_GET['current'] : 1;
     $limit = 5;
 
     $promotions = getAllPromotions($search);
     $total = count($promotions);
 
-    $paginatedPromotions = getPaginatedPromotions($promotions, $page, $limit);
+    $paginatedPromotions = getPaginatedPromotions($promotions, $current, $limit);
     $totalPages = (int)ceil($total / $limit);
 
     $statistics = getPromotionStatistics();
@@ -83,28 +75,11 @@ function promo_controller(): void {
         'promotions' => $paginatedPromotions,
         'statistics' => $statistics,
         'search' => $search,
-        'page' => $page,
+        'page' => $current,
         'totalPages' => $totalPages,
     ]);
 }
 
-// function promo_controller(): void {
-//     $search = $_GET['search'] ?? '';
-
-//     $promotions = getAllPromotions();
-
-//     if ($search !== '') {
-//         $promotions = array_filter($promotions, fn($promo) => stripos($promo['nom'], $search) !== false);
-//     }
-
-//     $statistics = getPromotionStatistics();
-
-//     render('promo', [
-//         'promotions' => $promotions,
-//         'statistics' => $statistics,
-//         'search' => $search 
-//     ]);
-// }
 
 
 
