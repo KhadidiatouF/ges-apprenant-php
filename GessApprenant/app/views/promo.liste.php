@@ -110,7 +110,7 @@ ob_start();
                             <?php endif; ?>
                         </td>
                         <td>
-                            <a href="?page=toggle_promo&id=<?= $promo['id'] ?>"><i class="fa-solid fa-ellipsis"></i></a>
+                            <a href=""><i class="fa-solid fa-ellipsis"></i></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

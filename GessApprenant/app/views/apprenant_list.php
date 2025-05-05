@@ -35,7 +35,7 @@
             </div>
             <div class="actions">
                <div class="dropdown-container">
-                    <button class="dropdown-btn"> Télécharger la liste  <i class="fa-solid fa-file-arrow-down"></i></button>
+                    <button class="dropdown-btn" style=" font-size: 17px; font-weight: bold;"> Télécharger la liste  <i class="fa-solid fa-file-arrow-down"></i></button>
                     <div class="dropdown-menu">
                         <a href="telecharger.php?format=pdf" class="dropdown-item pdf">
                         PDF <i class="fa-regular fa-file-pdf"></i>
@@ -46,10 +46,13 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary">
-                   <i class="fa-solid fa-user-plus"></i>
-                    Ajouter apprenant
-                </button>
+
+
+                <a href="index.php?page=<?= \App\Enums\Page::APPRENANT->value ?>"  class="btn btn-primary" style="text-decoration: none; font-weight: bold;">
+                    <i class="fa-solid fa-user-plus"></i>
+                        Ajouter apprenant
+                </a>
+                
             </div>
         </div>
         
@@ -72,106 +75,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058215</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel dev-web">DEV WEB/MOBILE</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058216</td>
-                    <td>Mamadou Gueye</td>
-                    <td>Keur Mbaye Fall Dakar, Sénégal</td>
-                    <td>783116655</td>
-                    <td class="referentiel ref-dig">REF DIG</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058217</td>
-                    <td>Ndiaga Lo</td>
-                    <td>Sicap Derkle Dakar, Sénégal</td>
-                    <td>784559930</td>
-                    <td class="referentiel dev-data">DEV DATA</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058218</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel aws">AWS</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058219</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel dev-web">DEV WEB/MOBILE</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058220</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel dev-web">DEV WEB/MOBILE</td>
-                    <td><span class="status-badge replaced">Remplacé</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058221</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel hackeuse">HACKEUSE</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058222</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel ref-dig">REF DIG</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058223</td>
-                    <td>Seydina Mouhammed Diop</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel ref-dig">REF DIG</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
-                <tr>
-                    <td class="photo"><img src="/api/placeholder/40/40" alt="Photo"></td>
-                    <td>1058224</td>
-                    <td>Ousseynou Diedhiou</td>
-                    <td>Sicap Liberté 6 villa 6059 Dakar, Sénégal</td>
-                    <td>785993546</td>
-                    <td class="referentiel dev-web">DEV WEB/MOBILE</td>
-                    <td><span class="status-badge">Actif</span></td>
-                    <td class="actions-menu">⋮</td>
-                </tr>
+                
+
+                <?php foreach ($apprenants as $apprenant): ?>
+                    <tr>
+                        <td class="photo"><img src="<?= htmlspecialchars($apprenant['photo']) ?>" alt="Photo" width="40" height="40"></td>
+                        <td><?= htmlspecialchars($apprenant['matricule']) ?></td>
+                        <td><?= htmlspecialchars($apprenant['Nom complet']) ?></td>
+                        <td><?= htmlspecialchars($apprenant['adresse']) ?></td>
+                        <td><?= htmlspecialchars($apprenant['telephone']) ?></td>
+                        <td class="referentiel <?= strtolower(str_replace([' ', '/'], '-', $apprenant['referentiel'])) ?>">
+                            <?= htmlspecialchars($apprenant['referentiel']) ?>
+                        </td>
+
+                        <td><span class="status-badge"><?= htmlspecialchars($apprenant['statut']) ?></span></td>
+                        <td class="actions-menu">
+                            <a href="index.php?page=<?= \App\Enums\Page::APPRENANT_DETAIL_MODULE->value ?>"><i class="fa-solid fa-ellipsis" style="color: red;"></i></a></td>
+                    </tr>
+                <?php endforeach; ?>
+                
             </tbody>
         </table>
         

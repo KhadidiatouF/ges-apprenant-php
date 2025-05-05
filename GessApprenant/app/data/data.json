@@ -182,8 +182,17 @@
             "Nom complet": "ISMAILA FALL",
             "adresse": "Liberte 1",
             "telephone": 771234433,
-            "referentiel": "Referent digital",
+            "referentiel": "HACKEUSE",
             "statut": "Remplace"
+        },
+        {
+            "photo": "assets\/images\/referentiel\/dev_web.png",
+            "matricule": 1058215,
+            "Nom complet": "Seydina Mouhammed Diouf",
+            "adresse": "Sicap Libert\u00e9 6 villa 6059 Dakar, S\u00e9n\u00e9gal",
+            "telephone": 785993546,
+            "referentiel": "DEV WEB\/MOBILE",
+            "statut": "Active"
         }
     ]
 }

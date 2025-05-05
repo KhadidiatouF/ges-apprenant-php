@@ -243,27 +243,41 @@ tr:hover {
 }
 
 .referentiel {
-    font-weight: 500;
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 2px;
+    background-color: #d0e6f7;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.dev-web {
+.dev-web-mobile {
+    background-color: #e7fbf1;
     color: #28a745;
+   
 }
 
 .ref-dig {
+    background-color: #eef8fb;
     color: #007bff;
 }
 
 .dev-data {
+    background-color: #eeeaf3;
     color: #9b59b6;
 }
 
 .aws {
     color: #f39c12;
+    background-color: #fcf5ed;
+   
 }
 
 .hackeuse {
     color: #e84393;
+    background-color: #ffc0cb;
+  
 }
 
 .pagination {
