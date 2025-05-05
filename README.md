@@ -1,5 +1,9 @@
 # GESTION DES APPRENANTS
 
 ## CONNEXION ADMIN
- "login": "adminODC" 
+ "nom": "Diop",
+ "prenom": "Awa",
+ "email": "awa@example.com",
+ "login": "adminODC",
+ "role": "admin",
  "password": "1234"
